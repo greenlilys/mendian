@@ -1,0 +1,11 @@
+<view class="container">
+    <view class="card">
+       <image src="{{logo_img}}" class="logo_img"></image>
+       <text class="card_name">{{cardInfo.nickname}}</text>
+        <view class="imgBox"> 
+          <image class="qrcode" src="{{qrcode}}"></image>
+        </view>        
+       <text class="card_nu">{{cardInfo.card_no}}</text>
+	   <!-- <view class="technology">©云微商提供技术支持</view> -->
+    </view>
+</view>

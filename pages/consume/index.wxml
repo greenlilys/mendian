@@ -1,0 +1,36 @@
+<view class="container">
+<scroll-view>
+    <view class="youngper">
+     <view class="xiaofei">
+        <view class="orang"></view>
+        <text>5.4青年节消费送</text>
+        <image src="../../images/arrowtop.gif"></image>
+     </view>
+    
+    <view class="youhui">
+       <text class="juan1">消费满100元送50元优惠券</text>
+       <text class="juan">消费满200元送100元优惠券</text>
+       <text class="juan">消费满300元送150元优惠券</text>
+       <text class="time1">活动时间：2017.5-2017.5.10</text>
+       <text class="time">适用门店：长江路店\t宝山店</text>
+    </view>
+  </view>
+
+  <view class="mother">
+     <view class="xiaofei">
+        <view class="orang"></view>
+        <text>5.14母亲节消费送</text>
+        <image src="../../images/arrowdown.gif"></image>
+     </view>
+  </view>
+
+  <view class="duanwu">
+     <view class="xiaofei">
+        <view class="orang"></view>
+        <text>端午节消费送</text>
+        <image src="../../images/arrowdown.gif"></image>
+     </view>
+  </view>
+</scroll-view>
+ 
+</view>

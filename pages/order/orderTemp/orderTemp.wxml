@@ -1,0 +1,51 @@
+ <template name="orderTemp">
+        <view class="boxb">
+   <view class="boxa">
+      <view class="bbox">
+          <text class="dstyle">{{source}}</text> <text class="wstyle">{{iscomplate}}</text>
+      </view>
+
+      <view class="dianmian">
+            <image src="{{firstImg}}"></image>
+            <view class="shuju">
+                    <view>
+                        <text class="datastyle">{{year}}</text> <text class="datastyle ml">{{time}}</text>
+                    </view>
+                    <view>         
+                        <text class="pricestyle">{{totlePrice}}</text> <text class="pricestyle ml">{{payPrice}}</text>
+                    </view>
+            </view>
+         
+      </view>
+     
+      <view class=""><text class="maistyle">{{onlinePay}}</text ></view>
+  </view>
+
+</view>
+  </template>
+
+<template name="orderedList">
+<view class="c-comment-list">
+        <navigator url="">
+                            <text class="commont-wz">应付金额：￥{{total_price}}   实付金额：<text class="comment-color">￥{{pay_price}}</text>
+                                <text wx:if="{{sheng_price}}"><text  class="b">省</text><text class="comment-color">¥{{sheng_price}}</text></text></text>
+                            <text class="commont-wz">订单编号：{{order_no}}</text>
+                            <text class="commont-wz">下单时间：{{created_at}}</text>
+                             <text class="commont-wz">联系店长：{{contact_name || "沫沫"}} <text class="comment-color">{{contact_phone || "18037466712"}}</text></text>
+        </navigator>
+						
+    </view>
+</template>
+<template name="orderingList">
+  <view class="c-comment-list">
+                        <navigator url="">
+                            <text class="commont-wz">应付金额：￥{{total_price}}   实付金额：<text class="comment-color">￥{{pay_price}}</text></text>
+                            <text class="commont-wz">订单编号：{{order_no}}</text>
+                            <text class="commont-wz">下单时间：{{created_at}}</text>
+                             <text class="commont-wz">联系店长：沫沫 <text class="comment-color">18012345678</text></text> 
+                        </navigator>
+                    </view>
+  </template>   
+
+
+  

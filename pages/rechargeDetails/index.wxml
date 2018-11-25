@@ -1,0 +1,6 @@
+<view wx:for = "{{details}}" wx:key="*this">
+	<text>充值{{item.chongValue}}元，赠送{{item.songValue}}元,获得积分{{item.intergal}}分</text>	
+</view>
+<!-- <view class="technology">©云微商提供技术支持</view> -->
+
+

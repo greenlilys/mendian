@@ -1,0 +1,89 @@
+
+<import src="shopTemp/shopTemp.wxml" />
+<view class="container">
+  <scroll-view scroll-y style="height:{{windowHeight}}px; width:{{windowWidth}}px;" bindscrolltoupper="toupper" bindscrolltolower="lower" upper-threshold="10px" lower-threshold="10px">
+
+      <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
+          <block wx:for="{{imgUrls}}" wx:key="key">
+              <swiper-item>
+                  <image wx:if = "{{item}}" src="{{item}}" class="slide-image" style="width:100%;height:180px;" />
+              </swiper-item>
+          </block>
+      </swiper>
+
+  <view class="box mt" wx:if="{{displayLing}}">
+      <view class="myCard">
+          <image src="../../images/mendian-index/vip.png"></image>
+          <view class="member">
+            <text class="texta">会员卡</text>
+            <navigator url="/pages/memberRights/index"><text class="textb">{{card_info}}</text></navigator>
+          </view>
+          <navigator url="/pages/register/index" open-type="navigate">
+            <view class="card">
+              <text>立即领卡</text>
+            </view>
+          </navigator>
+      </view>
+  </view>
+<view class="box" >
+  	<view class="check botLine" wx:if="{{hasCoupon}}">
+        <view class="member" >
+    	    <image src="../../images/mendian-index/hui.png"></image>         
+        	<text class="texta">优惠券</text>
+        </view> 
+        <navigator url="/pages/coupon/index">
+        	<view class="card">
+            	<text>立即领劵</text>
+            </view>
+        </navigator>
+    </view>
+    <view class="check ">
+        <view class="member"> 
+    	    <image src="/images/personal_chuzhi.png"></image>         
+        	<text class="texta">买单</text>
+        </view> 
+           <navigator url="/pages/payOrder/index">   
+        	<view class="card">
+            	<text>立即买单</text>
+            </view>
+           </navigator>   
+    </view>
+</view>
+ <view class="product">
+	<view class="topBox">
+		<view class="recom">
+			<text>产品推荐</text>	
+		</view>
+		<view class="more" bindtap="morePro">
+			<text>更多</text>
+			<image class="img" src="../../images/arrowdown.gif"></image> 
+		</view>		
+	</view> 
+	<view class="imgBox">
+		<image src="{{item.image}}" wx:for="{{productList}}" wx:key="name" 
+		id="{{index}}" data-src="{{item.image}}" bindtap="proPreviewImg"></image>
+	</view>
+</view>
+<view class="moreShop">
+	<view class="topBox">
+		<view class="recom">
+			<text>商家门店</text>
+		</view>
+		<view class="more" bindtap="moreShop">
+			<text>更多</text>
+			 <image class="img" src="../../images/arrowdown.gif"></image> 
+		</view>		
+	</view> 
+</view> 
+<view wx:for="{{list}}" wx:key="id">
+	<template is="shop" data="{{...item}}"></template>
+</view>
+<view class="fixEd" bindtap='scanCode'>
+	  <image src="../../images/a_03.png"></image>
+	  <text>扫码支付</text>
+</view>
+<!-- <view class="technology" wx:if="{{!appInstance.copyRight}}">©云微商提供技术支持</view> 
+<view class="technology" wx:if="{{appInstance.copyRight}}">{{appInstance.copyRight}}</view> -->
+ </scroll-view>
+</view>
+

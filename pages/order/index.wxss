@@ -1,0 +1,210 @@
+.container{
+	height:100%;   
+   width:100%;
+ font-family: "微软雅黑";
+}
+
+.orderImg{
+  width:230rpx;
+  height:219rpx;
+
+}
+.box{
+	 width:230rpx;
+     margin-top:400rpx;
+  margin-left:260rpx;
+}
+.getImg{
+	font-size:9pt;
+	color:#ccc;
+	text-align:center;
+}
+page{
+	height:100%;
+}
+.boxb{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  display: -webkit-flex;
+  -webkit-flex-direction:column; 
+  align-items:center;
+  background:white;
+margin-bottom:20rpx;
+}
+.boxa{
+  width:680rpx;
+  height:300rpx;
+  background:white;
+  margin:0 auto;  
+}
+
+.dstyle,.wstyle{
+  font-size:12pt;
+}
+.wstyle{
+   color:green;
+   position:absolute;
+  right:0;
+}
+.bbox{
+  height:70rpx;
+  display:flex;
+  flex-direction:row;
+  display: -webkit-flex;
+  -webkit-flex-direction:row; 
+  align-items:center;
+  position:relative;
+}
+
+
+.dianmian{
+  
+  height:170rpx;
+  background:#FAFAFA;
+}
+.dianmian image{
+  width:170rpx;
+  height:170rpx;
+  float:left;
+}
+
+.datastyle{
+  font-size:9pt;
+  color:#949494;
+}
+.pricestyle{
+  color:#686868;
+  font-size:11pt;
+}
+.shuju{
+  float:left;
+  padding-left:20rpx;
+  height:170rpx;
+  box-sizing:border-box;
+  padding-top:10rpx;
+}
+.ml{
+  margin-left:26rpx;
+}
+.maistyle{
+  font-size:8pt;
+  color:#949494;
+}
+/*有订单*/
+
+.swiper-tab{ 
+  width: 100%; 
+  border-bottom: 2rpx solid #eeeeee; 
+  text-align: center; 
+  line-height: 80rpx;
+} 
+.swiper-tab-item{ 
+  font-size: 30rpx; 
+  display: inline-block; 
+  width: 20%; 
+  color: #666666; 
+} 
+.on{ 
+  color: #f10b2e; 
+  border-bottom: 5rpx solid #f10b2e;
+} 
+.swiper-box{ 
+  display: block; 
+  width: 100%;
+  height:100%; 
+  padding:3% 0; 
+}
+ 
+ swiper-item{
+ width:100%;
+ height:100%;
+}  
+.c-comment{
+    width:95%;
+    height:60rpx;
+    line-height: 60rpx;
+    background:#FFF;
+    font-size:28rpx;
+    padding-left:5%;
+    clear: both;
+}
+.c-comment-suc {
+    color: #cb2527;
+    border-left: 1rpx solid #ddd;
+    margin-left: 2%;
+    padding-left:2%;
+}
+.c-comment-list {
+    width:90%;
+    height:260rpx; 
+    background: #f5f5f5;
+    padding:3% 5%;
+    margin-top: 2%;
+    overflow: hidden; 
+}
+.c-comment-list .commont-wz{
+    width:100%; 
+    display: block;
+    color: #646464;
+    font-size:27rpx;
+    margin: 3% 0;
+}
+.c-comment-list .comment-color{
+    color: #cb2527;
+}
+.c-comment-list .b{
+    border-radius: 50% 50%;
+    background: #cb2527;
+    display: inline-block;
+    color: #fff;
+    width: 40rpx; 
+    line-height: 40rpx; 
+    margin:0 10rpx;
+    text-align: center;
+    font-weight: normal;
+    font-size:27rpx;
+}
+.c-com-btn {
+    width:100%;
+    float: right;
+    height:100rpx; 
+    overflow: hidden;
+}
+.c-com-btn .oncepay {
+    border: 1rpx solid #cb2527;
+    color: #cb2527;
+    float: right;
+    display: block;
+    padding:2% 2%;
+    border-radius: 10rpx 10rpx;
+    font-size:28rpx;
+    text-align: center;
+    margin:2% 8% 0 0;
+}
+.c-com-btn .canelpay {
+    border: 1rpx solid #626262;
+    color: #626262;
+    float: right;
+    display: block;
+    padding:2% 2%;
+    border-radius: 10rpx 10rpx;
+    font-size:28rpx;
+    text-align: center;
+    margin:2% 8% 0 0; 
+}
+ .line{
+    width:100%;
+    border:0;
+    margin: 3% 0;
+    height: 20rpx;
+    background: #efefef;
+    clear: both;
+} 
+.technology{
+	width:100%;
+	font-size:8pt;
+	color:#ccc;	
+	text-align:center;
+	padding-top:40rpx;
+}

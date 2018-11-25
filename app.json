@@ -1,0 +1,62 @@
+
+{
+
+  "pages":[
+    
+    "pages/home/index",
+	"pages/bill/index",
+	"pages/order/index",
+	"pages/recharge/index",
+	"pages/rechargeDetails/index",
+    "pages/payOrder/index",
+    "pages/memberRights/index",
+    "pages/my/index",
+    "pages/card/index",      
+    "pages/memberCard/index",   
+    "pages/register/index",        
+    "pages/coupon/index", 	  
+    "pages/consume/index"       
+  ],
+  "window":{      
+    "navigationBarBackgroundColor": "transparent",
+    "navigationBarTitleText": "智慧门店",
+    "navigationBarTextStyle":"black",
+    "backgroundColor":"#fff",
+    "backgroundTextStyle": "dark",
+	"enablePullDownRefresh":true
+  },
+  "tabBar":{
+    "borderStyle":"white",
+    "color":"#888888",
+    "selectedColor":"#F53530",
+    "backgroundColor":"#FFFFFF",
+    "list": [{
+      "pagePath": "pages/home/index",
+      "iconPath": "images/tarbar_home.png",
+      "selectedIconPath": "images/tarbar_home_active.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/order/index",
+      "iconPath": "images/tarbar_catelog.png",
+      "selectedIconPath": "images/tarbar_catelog_active.png",
+      "text": "订单"
+    }, {
+      "pagePath": "pages/card/index",
+      "iconPath": "images/tarbar_cart.png",
+      "selectedIconPath": "images/tarbar_cart_active.png",
+      "text": "我的券"
+    }, {
+      "pagePath": "pages/my/index",
+      "iconPath": "images/tarbar_my.png",
+      "selectedIconPath": "images/tarbar_my_active.png",
+      "text": "我的"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

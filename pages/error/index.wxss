@@ -1,0 +1,60 @@
+page{
+  background: #f6f6f6;
+}
+navigator:hover{
+  background: none;
+}
+.img{
+   width:100%; 
+  margin: 0 auto;
+}
+.img image{
+  width:541.5rpx;
+  height:424.5rpx;
+  display: block;
+   margin:100rpx auto 0 auto; 
+}
+.bt{
+  display: block;
+  font-size:35rpx;
+  text-align: center;
+  margin:50rpx 0 100rpx 0;
+}
+.line{
+  width:90%;
+  margin: 0 auto;
+  height: 2rpx;
+  border:0;
+  background: #ddd;
+}
+.yuanyin{
+  width:80%;
+  height:300rpx;
+  margin:30rpx auto;
+  color: #666;
+  display: block;
+}
+.yuanyin-l{
+  float: left;
+  font-size: 32rpx;
+}
+.yuanyin-r{
+  float: left;
+}
+.yuanyin-r text{
+  font-size: 30rpx;
+  display: block;
+}
+.fot{
+  width: 90%;
+  height: 100rpx;
+  margin: 0 auto;
+  display: block;
+}
+.fot navigator{
+  font-size: 32rpx;
+  color: #5689bd;
+  float: left;
+  width:50%;
+  text-align: center;
+}

@@ -1,0 +1,34 @@
+<view class="container">
+     <view class="couponBox">
+        <view class="coupon" style="background-color:{{card.color || '#ffedca'}}">
+           <view class="logo">
+                <image wx:if="{{logo_img}}" src="{{logo_img}}"></image>
+           </view>
+           <view class="textBox">
+              <text class="tea">{{card.name}}</text>
+              <text class="price">{{}}</text>
+           </view>
+           
+        </view>          
+     </view>
+
+     <view class="formBox">
+        <view class="mob">
+            <text class="mobstyle">手机</text>
+            <input placeholder="输入手机号" bindinput = "userNumberInput" type="number" name="linkTel"  value="{{agentTel}}"  maxlength="11"/>			 
+                 <button style="display:{{selected1? block : none}};" class="{{yanzheng1}}" bindtap="sendSmsCode" >获取验证码</button>  
+               <button style="display:{{selected? block : none}};" class="{{yanzheng}}" disabled="{{true}}" bindtap="isnot">
+		   {{second}}s后重新获取</button>                 
+         
+        </view>
+        <view class="test">
+           <text class="">验证码</text> <input placeholder="输入验证码" bindinput = "userCodeInput" maxlength="6" /> 
+        </view>
+       
+          <view class="Kcard">
+           <button class="{{check ? 'btn1' : 'btn' }}" bindtap="opencardClick">立即开卡</button>
+        </view>  
+     </view>
+   <!-- <view class="technology">©云微商提供技术支持</view> -->
+    
+</view>

@@ -1,0 +1,35 @@
+<template name="shop">
+    <view class="shop1">   
+         <view class="imageBox">
+             <image wx:if = "{{logo_image}}" src="{{logo_image}}"></image>
+         </view>
+            <view class="textBox">
+                <view class="titleBox">
+					<text class="title"> {{name}}</text>
+					 <!-- <view class="moreShop">、、
+            			<text>更多店铺</text>
+						<image src="../../images/arrowwhite.gif"></image>
+            		</view>  -->
+				</view>				
+                <view class="addressBox" bindtap="getLocation" id="{{id}}">
+                      <image src="../../images/mendian-index/fixed.png"></image>
+					  <view class="address">{{address_detail}}</view>    		  	 				                          
+                </view>
+				<view class="timeBox">
+					 <text class="openTime">营业时间:{{openTime}}</text> 					  
+				</view>	
+				<view class="phone" bindtap="calling" id="{{id}}">
+					<image src="../../images/mendian-index/phone.png"></image>
+                </view>					
+          </view> 
+		  <view class="arrowBox" catchtap="toggle" id="{{id}}">
+                <image src="../../images/arrowdown.gif"></image>
+          </view>           
+    </view> 
+    
+  <view class="{{isShow}}" >
+         <block wx:for="{{array}}" wx:key="*this">       
+          <image wx:if = "{{item}}" src="{{item}}" data-src="{{item}}" id="{{id}}" bindtap="previewImg" class="showImg"></image>       
+       </block>           
+</view> 
+</template>

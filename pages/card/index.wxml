@@ -1,0 +1,58 @@
+<view>
+    <view class="swiper-tab">
+        <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">优惠券</view>
+        <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">促销券</view>
+        <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">折扣券</view>
+        <view class="onBottom" style="left:{{currentTab*250}}rpx"></view>
+    </view>
+
+    <swiper current="{{currentTab}}" class="swiper-box" duration="600" style="height:{{windowHeight-46}}px" bindchange="bindChange">
+        <swiper-item>
+            <view>
+                <view wx:if="{{ !youList.length }}">
+                    <view class="box">
+                        <image src="../../images/order.jpg" class="orderImg"></image>
+                        <view class="getImg">您还没有优惠券</view>
+                    </view>
+                    <!-- <view class="technology">©云微商提供技术支持</view>  -->
+                </view>
+                <view wx:else>
+                    <import src="cardTemp/cardTemp.wxml" />
+                    <scroll-view scroll-y style="height:{{windowHeight-46}}px;" bindscrolltoupper="toupper" bindscrolltolower="lower" upper-threshold="10px" lower-threshold="10px">
+                        <view wx:for="{{youList}}" wx:key="id">
+                            <template is="coupon_card" data="{{...item}}"></template>
+                        </view>
+                        <!-- <view class="technology">©云微商提供技术支持</view>  -->
+                    </scroll-view>
+                </view>
+            </view>
+        </swiper-item>
+        <swiper-item>
+            <view class="box">
+                <image src="../../images/order.jpg" class="orderImg"></image>
+                <view class="getImg">您还没有促销券</view>
+            </view>
+            <!-- <view class="technology">©云微商提供技术支持</view> -->
+        </swiper-item>
+        <swiper-item>
+            <view>
+                <view wx:if="{{ !zheList.length }}">
+                    <view class="box">
+                        <image src="../../images/order.jpg" class="orderImg"></image>
+                        <view class="getImg">您还没有折扣券</view>
+                    </view>
+                    <!-- <view class="technology">©云微商提供技术支持</view> 			 -->
+                </view>
+                <view wx:else>
+                    <import src="cardTemp/cardTemp.wxml" />
+                    <scroll-view scroll-y="true" style="height:{{windowHeight-46}}px;" bindscrolltoupper="toupper" bindscrolltolower="lower" upper-threshold="10px" lower-threshold="10px">
+                        <view class="" wx:for="{{zheList}}" wx:key="id">
+                            <template is="coupon_zhe" data="{{...item}}"></template>
+                        </view>
+                        <!-- <view class="technology">©云微商提供技术支持</view>  -->
+                    </scroll-view>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>

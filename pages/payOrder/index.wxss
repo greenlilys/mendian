@@ -1,0 +1,279 @@
+.container{
+  height:100%;
+  width:100%;
+  background-color:#F2F2F2;  
+  font-family: "微软雅黑";
+}
+page{
+  height:100%;
+}
+.formBox{
+  width:100%;
+  height:180rpx;
+  background-color:white;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.inputBox{
+  width:660rpx;
+  height:90rpx;
+  margin-top:20rpx;
+  position:relative;
+}
+
+.inputBox input{
+  width:100%;
+  height:90rpx;
+  border:1rpx solid #ccc;
+  border-radius:6rpx;
+  box-sizing:border-box;
+  font-size:12pt;
+  padding-left:20rpx;
+ font-family: "微软雅黑";
+}
+.inputBox input.error {
+    border-color: #cb2527;
+}
+.xf{
+    position:absolute;
+    top:50%;
+    right:20rpx;
+    font-size:16pt;
+    margin-top:-10pt;    
+    color:#cb2527;
+  }
+.check{
+  width:6rpx;
+  height:6rpx;
+  position:absolute;
+  top:90rpx;
+  left:10rpx;  
+}
+
+.inputBoxb{
+  width:660rpx;
+  height:100rpx;
+  margin-top:20rpx;
+}
+
+.noybox{
+  height:40rpx;
+  width:660rpx;
+  box-sizing: border-box;
+  display:flex;
+  display: -webkit-flex;
+  flex-direction:row;
+   -webkit-flex-direction: row;
+
+  align-items:center;
+  margin-top:20rpx;
+}
+.noybox .img{
+  display:inline-block;
+  width:38rpx;
+  height:38rpx;
+}
+.noybox .noyh{
+  font-size:8pt;
+    margin-left:10rpx;    
+}
+.dazhe{
+  margin-top:20rpx;
+  background:#ffffff;  
+   font-size:12pt;   
+    width:100%;
+}
+.dazhebox{
+  width:660rpx;
+   height:90rpx;
+   margin:0 auto;
+   line-height:90rpx;
+}
+.zhekoumoney{
+ float:right;
+}
+.zhekoujian{
+  float:left;
+}
+
+.jifen{
+  
+  background:#ffffff;
+  width:100%;
+  margin-top:20rpx;
+  box-sizing:border-box;
+}
+.jifen .btn{
+  display:block;
+  width:126rpx;
+  height:66rpx;
+}
+.jfbox{
+  width:660rpx;
+   height:90rpx;
+   line-height: 90rpx;
+   border-bottom:1rpx solid #F2F2F2;
+   margin:0 auto;
+   display:flex;
+   display: -webkit-flex;
+  flex-direction:row;
+   -webkit-flex-direction: row;
+  align-items:center;
+  -webkit-align-items:center;
+  position:relative;
+}
+.jfbox switch{
+  position:absolute;
+  bottom:4rpx;
+
+}
+.fr{
+  position:absolute;
+  right:0;
+}
+.ftyle{
+  font-size:12pt;
+  }
+.jifen .last{
+  border-bottom:none;  
+}
+
+
+.zhifu{
+     margin-top:30rpx;
+     font-size:14pt;
+  }
+.zhifu button{
+    width:660rpx;
+    height:90rpx;
+    border-radius:6rpx;
+    background:#FF6336;
+    color:#FFF;
+}
+
+.zhifu button.error{
+    background-color:rgb(114,113,113);
+}
+
+.quan{
+    width:100%;
+    background: #FFF;
+    margin-top: 20rpx;
+    padding: 20rpx 0; 
+}
+.quan-bt{
+    width:81%;
+    height: 100rpx;
+    padding: 0 3%;
+    margin: 0 auto;
+    border: 1rpx solid #ddd;
+}
+.quan .quan-bt text{
+    float: left;
+    font-size:12pt;
+    text-align: center;
+    color: #333;
+    margin-top:30rpx;
+}
+.quan .quan-bt image{
+    float:right;
+    width:60rpx;
+    height:60rpx;
+    margin-top:15rpx;
+}
+.quans{
+    width: 90%;
+    padding:0 5%;
+    margin:30rpx auto;
+    margin-top: 30rpx;
+    overflow: hidden;
+}
+.quans navigator{
+    position: relative;
+    background: #fff;
+    display: block;
+    width:85%;
+    height:160rpx;
+    padding:20rpx 20rpx;
+    border: 1px solid #b3b3b3;
+    font-size: 30rpx;
+    color:#b3b3b3;
+    margin: 20rpx auto;
+}
+.quans .quans-list.selected {
+    border: 1rpx solid #cb2527;
+    color: #cb2527;
+    background: #fff;
+}
+ .quans .i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+}
+.quans .quans-list{
+	display:flex;
+	flex-direction: row;
+	align-items:center;
+	height:154rpx;
+}
+.quans view:hover .i{
+    border-top: 10px solid #cb2527;
+} 
+.quans-l{
+     width:25%;
+    padding: 0 3% 0 1%;    
+    text-align: center;
+    border-right: 1rpx solid #ddd;
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+	
+}
+.quans-l .quan-name{
+   
+    text-align: center;
+    font-size:14pt;
+    color: #333;
+	
+}
+.quans-r{
+    width:70%;
+   
+    text-align: center;   
+}
+.quans-r .price{
+    font-size:18pt;
+    display: block;
+    color:#cb2527;
+   
+}
+.quans-r .date{
+    font-size: 10pt;
+    color: #999;
+    display: block;
+    margin-top: 15rpx;
+}
+
+.hide{
+    display:none;
+}
+.quans-l .quan-limit{
+	font-size:8pt;
+	margin-top:10rpx;
+}
+.quans .noCoupon{
+	font-size:9pt;
+	color:#808080;
+	text-align:right;
+}
+.technology{
+	width:100%;
+	font-size:8pt;
+	color:#ccc;	
+	text-align:center;
+	padding-top:80rpx;	
+}

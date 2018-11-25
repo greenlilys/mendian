@@ -1,0 +1,15 @@
+text{
+	font-size:10pt;
+	width:70%;
+	display:block;
+	margin:0 auto;
+	height:40rpx;
+	line-height: 40rpx;
+}
+.technology{
+	width:100%;
+	font-size:8pt;
+	color:#ccc;	
+	text-align:center;
+	padding-top:60rpx;
+}

@@ -1,0 +1,22 @@
+ <view wx:if="{{ !list.length }}">
+    <view class="box">
+	    <image src="../../images/order.jpg" class="couponImg"></image>
+	    <view class="getImg">暂无优惠卷</view>
+	</view>
+</view>
+<view wx:else>
+    <import src="couponTemp/couponTemp.wxml"/>
+    <scroll-view scroll-y="true" style="height:{{windowHeight}}px;"
+                 bindscrolltoupper="toupper" bindscrolltolower="lower"
+                 upper-threshold="10px" lower-threshold="10px" >
+        <view class="" wx:for="{{list}}" wx:key="id">
+		<view wx:if="{{item.type == 1}}">
+            <template is="coupon_card" data="{{...item}}"></template>
+		 </view>
+		 <view wx:else>
+		    <template is="coupon_zhe" data="{{...item}}"></template>
+		 </view>			           
+        </view>
+		<!-- <view class="technology">©云微商提供技术支持</view>  -->
+    </scroll-view>
+</view>  

@@ -1,0 +1,62 @@
+<view class="container">
+<!-- form表单 -->
+   <view class="formBox">
+       
+         <!-- 消费总额 -->
+      <view class="inputBox">
+             <input bindinput="onInput"  class="{{ !check && 'error' }}" placeholder="消费总金额（元）"/>
+            <text class="xf" >元</text>
+       </view>
+     </view>
+
+   <!-- 满减 -->
+    <view class="quan" wx:if="{{ couponInfo.use && couponList.length > 0}}">
+        <view class="quan-bt">
+            <text>是否使用优惠券</text>
+            <image src="/images/mendian-index/arrow.png" bindtap="handleTaggle"/>
+        </view>
+        <view class="quans {{ display ? '': 'hide'}}">
+            <view wx:for="{{ newCouponList}}" wx:for-item="item" wx:key="id">
+                <view  class="quans-list {{ couponInfo.couponId == item.id ? ' selected':''}}" bindtap="handItem" data-couponId="{{item.id}}">
+                    <view class="quans-l">
+                        <text class="quan-name">{{item.type ? '优惠券': '折扣券'}}</text>
+                        <text class="quan-limit" wx:if="{{ item.man > 0 }}">满{{item.man}}元使用</text>
+                    </view>
+					<view class="quans-r">
+                        <text class="price">{{item.type ? item.value_price + '元': item.value_price_zhe + '折'}}</text>
+                        <text class="date">{{item.start_at}}至{{item.end_at}}</text>
+                    </view>
+                    <!--<view class="i"></view>-->
+                </view>
+            </view>
+            <view wx:if="{{ newCouponList.length == 0}}" class="noCoupon">
+                <text >你没有可用的券！</text>
+            </view>
+        </view>
+    </view>
+
+     <!-- 积分优惠 -->
+
+     <view class="jifen" >
+         <view class="jfbox" wx:if="{{ cardInfo.use}}">
+             <text class="ftyle">会员{{cardInfo.zhe}}折</text>  <text class="fr ftyle">-￥{{cardInfo.money}}</text>
+         </view>
+
+         <view class="jfbox" wx:if="{{ intragelInfo.use }}">
+             <text class="ftyle">可用{{intragelInfo.intragel}}积分抵扣{{intragelInfo.money}}元</text>
+             <switch type="switch" class="fr" bindchange="switchChange" color="#FF6336"/>            
+         </view>
+
+         <view class="jfbox last" wx:if="{{ moneyInfo.use }}">
+             <text class="ftyle">可用余额{{ moneyInfo.money }}元</text>
+             <switch type="switch"  class="fr" bindchange="switch2Change" color="#FF6336" />
+         </view>
+     </view>
+
+     <!-- 支付 -->
+										
+     <view class="zhifu">
+       	<button class="{{ !check && 'error' }}" bindtap="goPay" >支付:￥{{displayTotalPay}}</button>
+     </view>
+     <!-- <view class="technology">©云微商提供技术支持</view> -->
+</view>

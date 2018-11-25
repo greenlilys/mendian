@@ -1,0 +1,16 @@
+<view class="img">
+  <image src="/images/error.png"  />
+  <text class="bt">糟糕！页面丢失了......</text>
+</view>
+<view class="line"></view>
+<view class="yuanyin">
+  <text class="yuanyin-l">可能原因：</text>
+  <view class="yuanyin-r">
+    <text>网络信号弱</text>
+    <text>该应用不可用</text>
+  </view>
+</view>
+<view class="fot">
+  <navigator url="">刷新</navigator>
+  <navigator url="">返回</navigator>
+</view>

@@ -1,0 +1,153 @@
+page{
+  background:#efefef;
+}
+.price-else{
+  width: 90%;
+  padding:0 5%;
+  /* margin:30rpx auto 20rpx auto; */
+  display: block;
+  height:92rpx;
+  font-size: 12pt;
+  color: #333;
+  overflow:hidden;
+  
+
+}
+.price-else .balance,.price-else .price-color{
+	float:left;
+	line-height: 92rpx;
+}
+.price-else .details{
+	color:#cb2527;
+	float:right;
+	font-size: 9pt; 
+	padding:30rpx 0;
+}
+.price-color{
+   color:#cb2527;
+}
+.price{
+  width: 90%;
+  padding:0 5%;
+  margin:0rpx auto; 
+  overflow: hidden;  
+}
+.pad{
+ margin:10rpx 0;
+ position: relative;
+  background: #fff;
+  display: block;
+  width:215rpx;
+  padding:15rpx 0;
+  border: 1px solid #b3b3b3;
+  text-align: center;
+  font-size: 30rpx;
+  color:#b3b3b3;
+  height:70rpx;
+  line-height:70rpx;
+ }
+.price view{
+  float: left;   
+}
+.add{
+  border: 1px solid #cb2527;
+  color: #cb2527;
+  background: #fff;
+}
+ .adds{
+  border-top: 10px solid #cb2527;
+} 
+.price .i{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+}
+
+.login-name{
+  width:80%;
+  padding:10rpx 5%;
+  margin:20rpx auto 30rpx auto;
+  font-size:38rpx;
+  border-radius:10rpx 10rpx;
+  border:1rpx solid #ddd;
+  background: #fff;
+  height:100rpx;
+}
+.re-style{
+  background: #fff;
+  border-radius:10rpx 10rpx;
+  margin:0 auto; 
+  width: 90%;
+  padding:10rpx 0;
+  overflow: hidden;
+}
+.re-styles{
+  width:85%;
+  height: 100rpx;
+  margin: 0 auto;
+}
+.re-styles .style-img{
+  width:96rpx;
+  height:74rpx;
+  float: left;
+  margin-top:2%;
+}
+.re-styles .style-tet{
+  float: left;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 100rpx;
+  margin-left:15rpx;
+}
+.line{
+  width:100%;
+  height:1rpx;
+  margin:10rpx auto;
+  border: 1rpx solid #D3D3D3;
+  clear: both;
+}
+button {
+  margin:80rpx auto;
+  border: 0;
+  color: #fff;
+  width:90%;
+  height:90rpx;
+  font-size:32rpx;
+  text-align: center;
+  border-radius:10rpx 10rpx;
+  background:#cb2527;
+  outline: none;
+  line-height:90rpx; 
+}
+.loginBtn{
+  background-color:rgb(114,113,113); 
+}
+.checked{
+  float: right;
+}
+.chooe,.chooes{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 30rpx;
+}
+.chooes{
+  display: none;
+}
+.checked:hover .chooe{
+  display: none;
+}
+.checked:hover .chooes{
+  display:block;
+}
+.borderLine{
+  border-bottom:1rpx solid #D3D3D3;
+}
+.technology{
+	width:100%;
+	font-size:8pt;
+	color:#ccc;	
+	text-align:center;	
+}

@@ -1,0 +1,42 @@
+<template name="coupon_card">
+    <view class="coupons">
+        <view class="coupon-c" style="background-color:{{background || '#E04F56'}};">
+            <image src="../../images/over.png" class="img" wx:if="{{has}}"></image>
+            <view class="coupon-top">
+                <view class="coupon-topl">
+                    <text class="fuhao">¥</text>
+                    <text class="price">{{value_price}}</text>
+                </view>
+                <view class="coupon-topr">
+                    <text class="bt">优惠卷<text class="limit" wx:if="{{man > 0}}">(满{{man}}元)</text></text>
+                    <text class="day">{{start_at}}至{{end_at}}</text>
+                </view>
+            </view>
+            <view class="coupon-fot">
+                <button type="default" data-coupon-Id="{{id}}" bindtap="handlerCoupon" wx:if="{{!has}}">立即领取</button>
+            </view>
+        </view>
+    </view>
+</template>
+
+<template name="coupon_zhe">
+    <view class="coupons">
+        <view class="coupon-c" style="background-color:{{background || '#E04F56'}};">
+            <image src="../../images/over.png" class="img" wx:if="{{has}}"></image>
+            <view class="coupon-top">
+                <view class="coupon-topl">
+                    <text class="price prices">{{value_price_zhe}}</text>
+                    <view class="line"></view>
+                    <text class="zhekou">折</text>
+                </view>
+                <view class="coupon-topr">
+                    <text class="bt">折扣劵<text class="tiaojian">{{tiaojian}}</text></text>
+                    <text class="day">{{start_at}}至{{end_at}}</text>
+                </view>
+            </view>
+            <view class="coupon-fot">
+                <button type="default" data-coupon-id="{{id}}" bindtap="handlerCoupon" wx:if="{{!has}}">立即领取</button>
+            </view>
+        </view>
+    </view>
+</template>

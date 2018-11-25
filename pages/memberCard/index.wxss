@@ -1,0 +1,66 @@
+.container{
+  background-color:#F2F2F2;
+  width:100%;
+  height:100%;
+ font-family: "微软雅黑";
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+}
+page{
+  height:100%;
+}
+.card{
+  width:86%;
+  height:90%;
+  background-color:#fff;
+  border-radius:20rpx;  
+  margin:0 auto;
+ display:flex;
+ flex-direction: column;
+  align-items: center; 
+}
+.card .logo_img{
+  width:120rpx;
+  height:120rpx;
+   background:#ccc;
+  border-radius:50%;
+  background-size:cover;
+  margin-top:40rpx;
+  
+}
+.card .card_name{
+  text-align:center;
+  padding-bottom:20rpx;
+  display:block;
+  width:100%;
+  font-size:36rpx;
+  margin-top:20rpx;
+  font-weight: 300;
+   border-bottom:1rpx dotted #F2F2F2; 
+}
+ .card .qrcode{
+  width:500rpx;
+  height:500rpx;
+} 
+ .imgBox{
+   width:100%;
+   text-align: center;
+   margin-top:30rpx;
+} 
+.card .card_nu{
+  text-align:center;
+  padding-bottom:20rpx;
+  display:block;
+  width:100%;
+  font-size:36rpx;
+  margin-top:20rpx;
+  font-weight: 300;
+  }
+  .technology{
+	width:100%;
+	font-size:8pt;
+	color:#ccc;	
+	text-align:center;
+	padding-top:60rpx;	
+}

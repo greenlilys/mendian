@@ -1,0 +1,22 @@
+@charset 'utf-8';
+@import "components/wxParse/wxParse.wxss";
+
+.app .breakline {
+  border-width: 1px;
+  border-color: #DDD;
+  border-bottom-style: solid;
+}
+
+.icon-circle{
+    width:120px;
+    height:120px;
+    border-radius: 60px;
+}
+image{
+  vertical-align:top;
+}
+button{
+	 padding-left:0;
+  padding-right:0;
+}
+

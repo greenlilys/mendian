@@ -1,0 +1,19 @@
+.memberRights{
+    width:85%;
+    margin:20rpx auto;
+    line-height:45rpx;
+    font-size:12pt;
+    color: #666;
+}
+.content{
+	display:block;
+	width:100%;
+    text-align: justify; 
+}
+.technology{
+	width:100%;
+	font-size:8pt;
+	color:#ccc;	
+	text-align:center;
+	padding-top:60rpx;	
+}

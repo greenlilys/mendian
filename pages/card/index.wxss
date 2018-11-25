@@ -1,0 +1,128 @@
+
+page{
+	height:100%;
+}
+.orderImg{
+  width:230rpx;
+  height:219rpx;
+
+}
+.box{
+	 width:230rpx;
+     margin-top:400rpx;
+  margin-left:260rpx;
+}
+.getImg{
+	font-size:9pt;
+	color:#ccc;
+	text-align:center;
+}
+
+.coupon{
+    width:85%;
+    height: 240rpx;
+    border-radius:20rpx;
+    margin:10rpx auto;
+}
+.topbox{
+    display: -webkit-flex;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    height:240rpx;
+    position:relative;
+    width:100%;
+    justify-content: center;
+    box-sizing:border-box;
+    color:white;
+ }
+.topbox .price{
+    position:absolute;
+    width: 30%;
+    left: 5%;
+    top:28%;
+    height:150rpx; 
+    text-align: center;  
+    box-sizing:border-box; 
+}
+.topbox image{
+    position:absolute;
+    right:55rpx;  
+    width:70rpx;
+    height:70rpx;
+}
+.topbox .date{
+    display:flex;
+    width: 60%;
+    height: 150rpx;
+    flex-direction:column;
+    align-items:flex-start;
+    border-left:2rpx dotted white;
+    padding-left:20rpx; 
+    position:absolute;
+    left:35%;
+    top: 18%;
+}
+.topbox .code{	
+    font-size:16pt;
+}
+.topbox .num{
+    font-size:28pt;
+}
+.topbox .man{
+    font-size:16pt;
+    margin-top:20rpx;
+}
+.topbox .qixian{
+    font-size:10pt;
+    margin-top:20rpx;
+    color: rgba(255,255,255,0.8);
+}
+
+/* tap菜单 */
+.swiper-tab{  
+    width: 100%;         
+    display:flex;
+    flex-direction: row;
+    position:relative;
+	   
+ }  
+.swiper-tab-list{  
+    font-size: 30rpx;  
+    width: 33.33%;    
+    height:90rpx;
+    line-height:90rpx;
+    text-align: center;  
+  }  
+.on{ 
+    color: #F53530;   
+}    
+.onBottom{
+    height:2rpx;
+    background:#F53530;
+    width:33.33%;
+    position:absolute;
+    bottom:0;
+    transition:left 600ms;
+}  
+.swiper-box{ 
+    display: block; 
+    height: 100%; 
+    width: 100%; 
+    overflow: hidden;
+}  
+.swiper-box view{  
+    text-align: center;  
+} 
+
+.quan-limit{
+	font-size:8pt;
+	margin-top:10rpx;
+}
+.technology{
+	width:100%;
+	font-size:8pt;
+	color:#ccc;	
+	text-align:center;
+	padding-top:40rpx;
+}

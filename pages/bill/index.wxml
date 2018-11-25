@@ -1,0 +1,14 @@
+<template name="billTem">
+	<view class="box">
+		<view class="message">
+			<text class="type">{{body}}</text><text class="data">{{date}}</text>
+		</view>
+		<text class="price">{{value}}</text>
+	</view>
+</template>
+
+<view wx:for="{{billList}}" wx:key="bill_id">
+   <template is="billTem" data="{{...item}}"></template>
+</view>
+<!-- <view class="technology">©云微商提供技术支持</view>  -->
+

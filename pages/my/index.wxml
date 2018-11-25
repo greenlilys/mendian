@@ -1,0 +1,168 @@
+
+<view class="container">
+
+  <scroll-view scroll-y style="height:100%;">
+
+    <view wx:if="{{openCard}}">
+      <view wx:if="{{hasCard}}">
+        <view class="top">
+          <view class="background" style="background-color:{{cardSetting.color}};"></view>
+          <view class="top-b">
+            <view class="top-b-l">
+               <image wx:if="{{userInfo.avatar_url}}" class="userinfo-avatar" src="{{userInfo.avatar_url}}" mode="aspectFill" /> 
+              <text class="{{ userInfo.cardInfo.levelClass || 'levelClass' }}">{{userInfo.cardInfo.levelDesc || "普通会员"}}</text>
+            </view>
+            <view class="top-b-c">
+              <view class="top-b-ct">
+                <text class="user">{{userInfo.nickname}}</text>
+                <view class="birthday">
+                  <image src="/images/personal_dangao.png" />						
+						<picker mode="date" value="{{date}}" end="{{endData}}" bindchange="bindDateChange" disabled="{{stop}}">
+							<view class="text">
+							{{birthday}}
+							</view>
+						</picker>						
+                </view>
+              </view>
+              <text class="jiFen">积分：{{userInfo.cardInfo.itegral || 0}}</text>
+              <text class="id">卡号：{{userInfo.cardInfo.card_no}}</text>
+            </view>
+            <view class="top-b-r" bindtap="nav">
+              <image src="/images/personal_erweima.png" />
+            </view>
+            <navigator url="/pages/memberRights/index">
+                <text class="shuoming">查看会员权益 >></text>
+            </navigator>
+          </view>
+        </view>
+        <view class="center">
+          <view class="center-title">我的钱包</view>
+          <view class="center-lists">
+            <view class="center-list">
+              <view class="center-list-t">
+                <image src="/images/personal_chuzhi.png" />
+                <text>储值</text>
+              </view>
+              <text class="center-list-b">
+                <text class="center-b-size">¥{{userInfo.cardInfo.money || '0.00'}}</text>
+              </text>
+            </view>
+            <view class="h-line"></view>
+            <view class="center-list">
+              <view class="center-list-t">
+                <image src="/images/personal_jifen.png" />
+                <text>积分</text>
+              </view>
+              <text class="center-list-b"><text class="center-b-size">{{userInfo.cardInfo.itegral || 0}}</text>分</text>
+            </view>
+            <view class="h-line"></view>
+			<navigator url="../bill/index">
+			     <view class="center-list">
+					<view class="center-list-t">
+						<image src="/images/personal_yinhangka.png" />
+						<text>账单</text>
+					</view>
+					<text class="center-list-b"><text class="center-b-size">{{userInfo.cardInfo.chongCount || 0}}</text>条</text>
+				</view>
+			</navigator>
+          
+          </view>
+        </view>
+        <view class="none"></view>
+        <view class="center">
+          <view class="center-title">我的券包</view>
+          <view class="center-lists">
+            <navigator open-type="reLaunch" url="../card/index?currentTab=0">
+              <view class="center-list">
+                <view class="center-list-t center-list-ts">
+                  <image src="/images/personal_youhuiquan.png" />
+                  <text>优惠券</text>
+                </view>
+                <text class="center-list-b"><text class="center-b-size">{{userInfo.couponInfo.youCoupon || 0}}</text>张</text>
+              </view>
+            </navigator>
+
+            <view class="h-line"></view>
+            <navigator open-type="reLaunch" url="../card/index?currentTab=1">
+              <view class="center-list">
+                <view class="center-list-t center-list-ts">
+                  <image src="/images/personal_cuxiaoquan.png" />
+                  <text>促销卷</text>
+                </view>
+                <text class="center-list-b"><text class="center-b-size">{{userInfo.couponInfo.cuCoupon || 0}}</text>张</text>
+              </view>
+            </navigator>
+            <view class="h-line"></view>
+            <navigator open-type="reLaunch" url="../card/index?currentTab=2">
+              <view class="center-list center-list-ts">
+                <view class="center-list-t">
+                  <image src="/images/personal_zhekouquan.png" />
+                  <text>折扣券</text>
+                </view>
+                <text class="center-list-b"><text class="center-b-size">{{userInfo.couponInfo.zheCoupon || 0}}</text>张</text>
+              </view>
+            </navigator>
+          </view>
+        </view>
+         <view class="none"></view>
+          <navigator url="../recharge/index">
+            <view class="jifenBox">
+                <view class="jifen">
+                    <text>立即充值</text>                  
+                </view>
+            </view>
+          </navigator>		  		
+      </view>
+	  
+      <view class="inforBox" wx:else>
+        <view class="information">
+           <image wx:if="{{userInfo.avatar_url}}" class="userinfo-avatar" src="{{userInfo.avatar_url}}"></image> 
+          <text>{{userInfo.nickname}}</text>
+        </view>
+        <view class="couponBox">
+          <view class="coupon" style="background-color:{{cardSetting.color}}">
+            <view class="logo">
+               <image wx:if = "{{logo_img}}" src="{{logo_img}}"></image> 
+            </view>
+            <view class="textBox">
+              <text class="tea">{{cardSetting.name}}</text>               
+            </view>
+            <navigator url="/pages/register/index">
+              <view class="card">
+                <text>立即领卡</text>
+              </view>
+            </navigator>
+          </view>
+
+          <view class="member">
+            <navigator url="/pages/memberRights/index">
+				<image src="../../images/what.png"></image>
+            	<text>查看会员权益</text>
+			</navigator>
+          </view>
+        </view>
+        <view class="fenGe"></view>
+        <navigator url="../consume/index">
+          <view class="moneyBox">
+            <view class="money">
+              <view class="data">
+                <text class="consume">消费有礼</text>
+                <text class="give">满100元送50元优惠券</text>
+              </view>
+              <image src="../../images/arrow.gif"></image>
+            </view>
+          </view>
+        </navigator>	
+      </view>      
+    </view>
+
+    <view class="infor" wx:else>
+      <!--商家没有会员 -->
+      <view class="information">
+        <image wx:if="userInfo.avatar_url" class="userinfo-avatar" src="{{userInfo.avatar_url}}" background-size="cover"></image>
+        <text>{{userInfo.nickname}}</text>
+      </view>	  
+    </view>
+	<!-- <view class="technology">©云微商提供技术支持</view> -->
+  </scroll-view>
+</view>

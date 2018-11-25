@@ -1,0 +1,6 @@
+<view class="memberRights">
+	<text class="content">
+		{{content || ''}}
+	</text>
+</view>
+<!-- <view class="technology">©云微商提供技术支持</view> -->

@@ -1,0 +1,29 @@
+<template name="coupon_card">
+    <view class="coupon" style="background-color:{{background || '#E04F56'}};">
+        <view class="topbox">
+            <view class="price">
+                <text class="code">￥</text>
+                <text class="num">{{value_price}}</text>
+            </view>
+            <view class="date">
+                <text class="man">优惠卷<text class="quan-limit" wx:if="{{ man > 0 }}">(满{{man}}元)</text></text>
+                <text class="qixian">{{start_at}}至{{end_at}}</text>
+            </view>
+        </view>
+    </view>
+</template>
+
+<template name="coupon_zhe">
+    <view class="coupon" style="background-color:{{background || '#E04F56'}};">
+        <view class="topbox">
+            <view class="price">
+                <text class="num">{{value_price_zhe}}</text>
+                <text class="code">折</text>
+            </view>
+            <view class="date">
+                <text class="man">折扣劵</text>
+                <text class="qixian">{{start_at}}至{{end_at}}</text>
+            </view>
+        </view>
+    </view>
+</template>

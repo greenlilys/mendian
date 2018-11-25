@@ -1,0 +1,21 @@
+<import src="orderTemp/orderTemp.wxml"/>
+<view class="container">
+    <scroll-view scroll-y style="height:{{windowHeight}}px; width:{{windowWidth}}px;">
+        <view wx:if="{{orderList.length > 0 }}">
+            <view wx:for="{{ orderList }}" wx:key="id">
+                <view class="c-comment auto">
+                    <text class="c-comment-suc">已完成</text>
+                </view>
+                <template is="orderedList" data = "{{...item}}"></template>
+            </view>
+        </view>
+         <view wx:else>
+            <view class="box">
+                <image src="../../images/order.jpg" class="orderImg"></image>
+                <view class="getImg">没有已支付订单</view>
+            </view>
+        </view>    
+		<!-- <view class="technology">©云微商提供技术支持</view> -->
+    </scroll-view>
+	
+</view>

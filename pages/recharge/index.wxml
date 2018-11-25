@@ -1,0 +1,18 @@
+<view class="price-else">
+	<text class="balance">我的余额：</text><text class="price-color">{{balance}}元</text>
+	<navigator url ="../rechargeDetails/index?details={{details}}">
+		<text class="details" bindtap = "details">充值详情</text> 
+	</navigator>	
+</view>
+<view class="price" >
+  <view class="{{item.toggle}}" wx:for="{{priceArray}}" wx:key = "id"
+        data-price ="{{item.price}}" id="{{index}}" bindtap='copyPrice'
+        style="margin-left:{{index%3 == 0 ? 0 :10}}rpx;">
+      {{item.price}}元<view class="{{item.toggles}}"></view>
+  </view>
+</view>
+<input type="text" placeholder="请输入充值金额" value="{{inputPrice}}" bindinput="priceChange" class="login-name" />
+<button bindtap="onPay" class="{{!check && loginBtn}}">我要充值</button>
+<!-- <view class="technology">©云微商提供技术支持</view> -->
+
+
